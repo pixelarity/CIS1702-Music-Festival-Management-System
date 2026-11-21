@@ -2,6 +2,9 @@
 This code is created for the core component: Peformer Management
 (Ashleigh)
 """
+# Performer Record Dictionary
+performer_records = {
+}
 
 # Main Performer Loop (Ashleigh)
 while True:
@@ -19,21 +22,36 @@ while True:
                                     
                                     Choose Numbered Option: """))
         
-        # Performer Choice Options When Selected (Ashleigh)
-        if performer_choice == 1:
-            print("Chosen: Add Performer Record")
-        elif performer_choice == 2:
-            print("Chosen: View Performer Record")
-        elif performer_choice == 3:
-            print("Chosen: Update Performer Record")
-        elif performer_choice == 4:
-            print("Chosen: Delete Performer Record")
-        elif performer_choice == 5:
-            print("Chosen: Exit")
-            print("The Performer Management Panel has been closed.")
-            break
-        else:
-            print("Error: Number chosen outside range, please choose an option (1-4)")
+    # TODO: Fix Add Performer Record doing nothing once first field is inputted (Ashleigh)
 
     except ValueError:
         print("Error: This is not a valid number, please choose an option (1-4)")
+        
+    # Performer Choice Options When Selected (Ashleigh)
+    if performer_choice == 1:
+        print("// Chosen: Add Performer Record //")
+                
+        add_name = str(input("Enter Performer Name: "))
+        add_genre = str(input("Enter Music Genre: "))
+        add_email = str(input("Add Performer Email Address: "))
+                
+        performer_records.update({"Name:": add_name, "Genre": add_genre, "Email:": add_email})
+                
+        print(performer_records)
+
+    elif performer_choice == 2:
+        print("Chosen: View Performer Record")
+                
+    elif performer_choice == 3:
+        print("Chosen: Update Performer Record")
+                
+    elif performer_choice == 4:
+        print("Chosen: Delete Performer Record")
+                
+    elif performer_choice == 5:
+        print("Chosen: Exit")
+        print("The Performer Management Panel has been closed.")
+        break
+
+    else:
+        print("Error: Number chosen outside range, please choose an option (1-4)")
