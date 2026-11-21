@@ -5,14 +5,18 @@ This code is created for the core component: Peformer Management
 
 # Main Performer Loop (Ashleigh)
 while True:
-    performer_choice = int(input("""
-                                 // Performer Management Panel //
-                                 
-                                 Please choose a numbered option
-                                 
-                                 1: Add Performer Record
-                                 2: View Performer Record
-                                 3: Update Performer Record
-                                 4: Delete Performer Record
-                                 
-                                 Choose Numbered Option: """))
+    try:
+        performer_choice = int(input("""
+                                    // Performer Management Panel //
+                                    
+                                    Please choose a numbered option
+                                    
+                                    1: Add Performer Record
+                                    2: View Performer Record
+                                    3: Update Performer Record
+                                    4: Delete Performer Record
+                                    
+                                    Choose Numbered Option: """))
+
+    except ValueError:
+        print("Error: This is not a valid number, please choose an option (1-4)")
