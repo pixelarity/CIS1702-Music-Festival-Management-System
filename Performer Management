@@ -1,3 +1,18 @@
 """
 This code is created for the core component: Peformer Management
+(Ashleigh)
 """
+
+# Main Performer Loop (Ashleigh)
+while True:
+    performer_choice = int(input("""
+                                 // Performer Management Panel //
+                                 
+                                 Please choose a numbered option
+                                 
+                                 1: Add Performer Record
+                                 2: View Performer Record
+                                 3: Update Performer Record
+                                 4: Delete Performer Record
+                                 
+                                 Choose Numbered Option: """))
